@@ -47,7 +47,7 @@ args = parser.parse_args()
 
 if os.path.exists(args.file):
     print('The file exists')
-    sub_list=split_vtt("metalova_dvojacat_buh_neni.mp3.vtt", 25)
+    sub_list=split_vtt(args.file, int(args.split))
     print("Celkem scen/obrazku", len(sub_list))
     for i in sub_list:
         print(i["start"],i["end"],i["sec"])
